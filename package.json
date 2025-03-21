@@ -40,7 +40,7 @@
 		"test-unit": "jest --detectOpenHandles --runInBand --config jest.config.unit.ts",
 		"test-e2e": "start-server-and-test example \"http://localhost:3000|http://localhost:3001\" \"jest --detectOpenHandles --runInBand --config jest.config.e2e.ts\"",
 		"test": "npm run lint && npm run test-typeCheck && npm run test-unit && npm run test-e2e",
-		"prepare": "husky install",
+		"prepare": "husky install && npm run build",
 		"changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
 		"changelog:reset": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
 		"prerelease": "run-s lint build",
